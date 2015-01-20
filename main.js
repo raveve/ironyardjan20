@@ -14,7 +14,7 @@ var sum = function(x, y) {
 console.log(sum(8, 11));
 
 /**
-* PART 2
+* PART 2 - ORIGINAL VERSION
 *
 * Write a JavaScript program that calculates the average time for this marathoner to complete the full marathon (26.2mi)
 */
@@ -42,10 +42,54 @@ var getAverageTime = function(person) {
   return sum / 5;
 };
 
-// for...in
+console.log(getAverageTime(matt));
+console.log(getAverageTime(mark));
+
+/**
+* PART 2 - SECOND VERSION
+*
+* Write a JavaScript program that calculates the average time for this
+marathoner to complete the full marathon (26.2mi)
+*/
+
+var matt = {
+  finishingTime1: 240, //in minutes
+  finishingTime2: 210.4,
+  finishingTime3: 235.1,
+  finishingTime4: 208.9,
+  finishingTime5: 197.5,
+  finishingTime6: 227.4
+};
+
+var mark = {
+  finishingTime1: 120, //in minutes
+  finishingTime2: 110.4,
+  finishingTime3: 135.1,
+  finishingTime4: 108.9,
+  finishingTime5: 97.5
+};
+
+var getAverageTime = function(person) {
+  "use strict";
+
+  var totalTime = 0;
+
+  for (var finishingTime in person) {
+    totalTime += person[finishingTime];
+  }
+
+  var totalRaces = Object.keys(person).length
+
+  var avgTime = totalTime / totalRaces;
+
+  return avgTime;
+
+};
+
 
 console.log(getAverageTime(matt));
 console.log(getAverageTime(mark));
+
 
 
 /**
