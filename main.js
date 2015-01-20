@@ -6,9 +6,9 @@
 * For example, if the user input 3 and 6, then the answer would be: "9 (3+6)".
 */
 
-var sum = function(a, b) {
+var sum = function(x, y) {
   "use strict";
-  /// return ...
+  return x + y;
 }
 
 console.log(sum(8, 11));
@@ -37,8 +37,14 @@ var mark = {
 
 var getAverageTime = function(person) {
   "use strict";
-  // ... return ...
-}
+    var person;
+    var sum person.finishingTime1 + person.finishingTime2 + person.finishingTime3 + person.finishingTime4 + person.finishingTime5;
+  return sum / 5;
+};
+
+//var sum = function (object.finishingTime1(person), object.finishingTime2(person), object.finishingTime3(person), object.finishingTime4(person), object.finishingTime5(person) {
+//return object.finishingTime1(person) + object.finishingTime2(person) + object.finishingTime3(person) + object.finishingTime4(person) + object.finishingTime4(person);
+//  };
 
 console.log(getAverageTime(matt));
 console.log(getAverageTime(mark));
