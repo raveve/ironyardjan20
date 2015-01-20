@@ -38,13 +38,11 @@ var mark = {
 var getAverageTime = function(person) {
   "use strict";
     var person;
-    var sum person.finishingTime1 + person.finishingTime2 + person.finishingTime3 + person.finishingTime4 + person.finishingTime5;
+    var sum = person.finishingTime1 + person.finishingTime2 + person.finishingTime3 + person.finishingTime4 + person.finishingTime5;
   return sum / 5;
 };
 
-//var sum = function (object.finishingTime1(person), object.finishingTime2(person), object.finishingTime3(person), object.finishingTime4(person), object.finishingTime5(person) {
-//return object.finishingTime1(person) + object.finishingTime2(person) + object.finishingTime3(person) + object.finishingTime4(person) + object.finishingTime4(person);
-//  };
+// for...in
 
 console.log(getAverageTime(matt));
 console.log(getAverageTime(mark));
@@ -82,7 +80,8 @@ function addToBank(account, savings, retirement, checking) {
 
 function getSumOfAccounts(account) {
   "use strict";
-  // return ...
+  var sum = account.checking + account.savings + account.retirement;
+  return sum;
 }
 
 addToBank(MattsBankAccount, 100, 10, 1);
